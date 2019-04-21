@@ -1,0 +1,4 @@
+com\dlyong\consumer\ConsumerApplication.class
+com\dlyong\consumer\domain\User.class
+com\dlyong\consumer\config\RestClentConfig.class
+com\dlyong\consumer\controller\MovieController.class

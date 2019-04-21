@@ -1,0 +1,5 @@
+com\dlyong\provider\service\UserService.class
+com\dlyong\provider\domain\User.class
+com\dlyong\provider\repository\UserRepository.class
+com\dlyong\provider\controller\UserController.class
+com\dlyong\provider\ProviderApplication.class

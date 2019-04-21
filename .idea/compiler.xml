@@ -7,13 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-common" />
-        <module name="microservice-consumer" />
         <module name="microservice-consumer-movie" />
         <module name="microservice-eureka" />
-        <module name="microservice-provider" />
         <module name="microservice-provider-user" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice-consumer" target="1.8" />
+      <module name="microservice-provider" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
