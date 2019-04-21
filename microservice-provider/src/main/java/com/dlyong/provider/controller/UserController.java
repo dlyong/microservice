@@ -17,12 +17,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{id}")
-    public Map<String ,Object> provideService(@PathVariable("id") String id) {
+    public Object provideService(@PathVariable("id") String id) {
         System.out.println(userService.getUserInfoById(id).toString());
-        User user = userService.getUserInfoById(id);
-        Map<String,Object> result = new HashMap<String,Object>();
-        result.put("user",user);
-        return result;
+        return userService.getUserInfoById(id);
     }
 
 

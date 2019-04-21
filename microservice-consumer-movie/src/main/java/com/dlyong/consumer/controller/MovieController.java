@@ -22,14 +22,7 @@ public class MovieController {
     @Value("${provider.providerServiceUrl}")
     private String providerServiceUrl;
 
-    /**第一版本*/
-    @GetMapping("/user_1/{id}")
-    public String getProviderServiceUserInfoById_1(@PathVariable("id") String id) {
-        log.info("客户端调取服务端的方法");
-        return  restTemplate.getForObject("http://localhost:8000/" + id,String.class);
-    }
-    /**第二版本*/
-    @GetMapping("/user_2/{id}")
+    @GetMapping("/user/{id}")
     public String getProviderServiceUserInfoById_2(@PathVariable("id") String id) {
         log.info("客户端调取服务端的方法:通过value注解获取配置文件中服务端URL的方式");
         log.info("服务端Url:"+providerServiceUrl);
