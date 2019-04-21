@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-provider</artifactId>
+    <artifactId>microservice-provider-user</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.dlyong</groupId>
@@ -37,6 +37,11 @@
             <version>42.2.5</version>
         </dependency>
         <!--持久层end-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
     </dependencies>
 
 

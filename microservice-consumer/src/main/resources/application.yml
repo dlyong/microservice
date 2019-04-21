@@ -1,15 +1,4 @@
 server:
   port: 8001
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/microservice
-    username: postgres
-    password: root123
-  jpa:
-    show-sql: true
-    properties:
-      hibernate:
-        temp:
-          use_jdbc_metadata_defaults: false
 provider:
   providerServiceUrl: http://localhost:8000/
