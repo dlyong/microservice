@@ -2,18 +2,20 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-common" />
         <module name="microservice-consumer-movie" />
-        <module name="microservice-eureka" />
+        <module name="microservice-eureka-ha" />
         <module name="microservice-provider-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="microservice-consumer" target="1.8" />
+      <module name="microservice-eureka" target="1.8" />
       <module name="microservice-provider" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +25,7 @@
       <module name="microservice-consumer" options="-parameters" />
       <module name="microservice-consumer-movie" options="-parameters" />
       <module name="microservice-eureka" options="-parameters" />
+      <module name="microservice-eureka-ha" options="-parameters" />
       <module name="microservice-provider" options="-parameters" />
       <module name="microservice-provider-user" options="-parameters" />
     </option>

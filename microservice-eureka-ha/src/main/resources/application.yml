@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: microservice-eureka-ha
+---
+ #配置高可用eureka
+ #1.配置系统的hosts,添加：127.0.0.1 peer1 peer2
+ #2配置多节点eureka server ,让多节点eureka server 相互注册
+
+spring:
+  #指定profile = peer1
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  instance:
+    # 指定当profile=peer1时，主机名是peer1
+    hostname: peer1
+  client:
+    service-url:
+      # 将自己注册到peer2这个eureka上面去
+      defaultZone: http://peer2:8761/eureka/
+---
+spring:
+  #指定profile = peer1
+  profiles: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    # 指定当profile=peer1时，主机名是peer1
+    hostname: peer2
+  client:
+    service-url:
+      # 将自己注册到peer2这个eureka上面去
+      defaultZone: http://peer1:8761/eureka/
+
