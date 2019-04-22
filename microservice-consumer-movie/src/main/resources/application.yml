@@ -1,7 +1,5 @@
 server:
   port: 8001
-provider:
-  providerServiceUrl: http://localhost:8000/
 spring:
   application:
     name: microservice-consumer-movie
