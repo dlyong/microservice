@@ -14,6 +14,7 @@ public class RestClentConfig {
     private RestTemplateBuilder restTemplateBuilder;
 
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
 
         return restTemplateBuilder.build();
